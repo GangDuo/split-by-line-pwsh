@@ -20,7 +20,7 @@ $false なら分割後のファイルにその行を含みます。
 ```powershell
 Split-By-Line -Destination .\dest -File .\LineNumbers.csv -IsSkipLine { param($line)
     $clms = $line.split(",")
-    if($$clms[1] -eq '') {
+    if($clms[1] -eq '') {
         return $true
     }
     return $false
